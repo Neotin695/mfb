@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1086513267672",
+    "project_id": "market-player-3f067",
+    "storage_bucket": "market-player-3f067.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086513267672:android:d50bed22035c00d66de8ad",
+        "android_client_info": {
+          "package_name": "mehani.sim.mfb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086513267672-jfasv6g66ototd6mvgsq7lq0mf32pjbk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc7AxHUmQQ1vUzr1uuqActyDElfUuPPlo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086513267672-jfasv6g66ototd6mvgsq7lq0mf32pjbk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
