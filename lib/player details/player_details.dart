@@ -177,13 +177,13 @@ class _PlayerDetailsState extends State<PlayerDetails> {
                                       ],
                                     ),
                                     Visibility(
-                                      visible: userData.fanRating!.contains(
+                                      visible: !userData.fanRating!.contains(
                                           FirebaseAuth
                                               .instance.currentUser!.uid),
                                       child: TextButton(
                                           onPressed: () {
                                             Navigator.pushNamed(
-                                                context, RatePlayer.routeName);
+                                                context, RatePlayer.routeName,arguments: userId);
                                           },
                                           child: const Text('Rate skils')),
                                     )

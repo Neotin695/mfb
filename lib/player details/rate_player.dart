@@ -24,6 +24,8 @@ class _RatePlayerState extends State<RatePlayer> {
   @override
   Widget build(BuildContext context) {
     var uid = FirebaseAuth.instance.currentUser!.uid;
+    final userId = ModalRoute.of(context)!.settings.arguments as String;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text(
@@ -32,8 +34,10 @@ class _RatePlayerState extends State<RatePlayer> {
         ),
       ),
       body: StreamBuilder<DocumentSnapshot>(
-        stream:
-            FirebaseFirestore.instance.collection('users').doc(uid).snapshots(),
+        stream: FirebaseFirestore.instance
+            .collection('users')
+            .doc(userId)
+            .snapshots(),
         builder: (context, snapshot) {
           if (snapshot.hasData) {
             PlayerModel userData = PlayerModel.fromMap(
@@ -149,7 +153,7 @@ class _RatePlayerState extends State<RatePlayer> {
 
                     await FirebaseFirestore.instance
                         .collection('users')
-                        .doc(uid)
+                        .doc(userId)
                         .update(userData.toMap())
                         .then(
                       (value) {
